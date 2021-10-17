@@ -11,6 +11,10 @@ class App extends Component {
         tracks: [],
     }
 
+    componentDidMount() {
+        this.searchArtist('Jack Johnson')
+    }
+
     searchArtist = artistQuery => {
 
         fetch(`${API_ADDRESS}/artist/${artistQuery}`)
